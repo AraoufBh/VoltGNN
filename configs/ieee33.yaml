@@ -1,0 +1,59 @@
+# VoltGNN — IEEE 33-Bus configuration (Section 5)
+# PGA / OLR / RUR are physically well-defined on this bus system.
+
+dataset: ieee33
+data_root: data/raw
+window: 288            # one day at 5-min resolution
+grid_dt_min: 5
+
+# --- dynamic graph construction ---
+tau_c: 0.7            # correlation-edge threshold (Eq. 12)
+lambda_c: 1.0
+beta: 1.0             # congestion sensitivity (Eq. 11)
+gamma: 1.0            # renewable-surplus sensitivity (Eq. 11)
+
+# --- model dims (paper optimum, Fig. 7) ---
+in_dim: 16
+num_nodes: 33
+hidden_dim: 128       # d_h
+memory_dim: 128       # d_m
+gat_heads: 4          # H / K
+g_dim: 256            # d_g
+decoder_layers: 4     # L
+time_dim: 8
+
+# --- supervised loss weights (Eq. 35) ---
+mu1: 5.0
+mu2: 2.0
+mu3: 0.5
+
+# --- RL reward weights (Eq. 30) ---
+lambda_b: 5.0
+lambda_o: 2.0
+lambda_r: 1.0
+
+# --- deployment objective weights (Eq. 8), ratio 1:2:5:1 ---
+alpha1: 1.0
+alpha2: 2.0
+alpha3: 5.0
+alpha4: 1.0
+
+# --- optimization (Section 5.4) ---
+lr: 0.0003
+epochs: 200
+grad_clip: 1.0
+batch_size: 32
+early_stop_patience: 20
+
+# --- PPO (Section 5.4) ---
+ppo_episodes: 500
+ppo_gamma: 0.99
+ppo_clip: 0.2
+
+# --- online adaptation (Section 4.6) ---
+t_adapt: 96
+k_adapt: 5
+
+seed: 42
+device: cuda
+run_dir: runs/ieee33
