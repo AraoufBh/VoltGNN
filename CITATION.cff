@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+message: "If you use this software or the VoltGNN framework, please cite the paper below."
+title: "VoltGNN: A graph neural network for autonomous renewable energy redistribution in IoT-driven smart grids"
+authors:
+  - family-names: "Bahi"
+    given-names: "Abderaouf"
+    email: "a.bahi@univ-eltarf.dz"
+    affiliation: "Computer Science and Applied Mathematics Laboratory (LIMA), Chadli Bendjedid University, El Tarf, Algeria"
+  - family-names: "Khadir"
+    given-names: "Mohamed Tarek"
+    affiliation: "LabGED, Badji Mokhtar University, Annaba, Algeria"
+  - family-names: "Ourici"
+    given-names: "Amel"
+    affiliation: "LAM2SIN, Badji Mokhtar University, Annaba, Algeria"
+  - family-names: "Dinçer"
+    given-names: "Hasan"
+    affiliation: "School of Business, Istanbul Medipol University, Istanbul, Turkey"
+  - family-names: "Yüksel"
+    given-names: "Serhat"
+    affiliation: "School of Business, Istanbul Medipol University, Istanbul, Turkey"
+  - family-names: "Lakhdara"
+    given-names: "Amira"
+    affiliation: "Faculty of Technology, Badji Mokhtar University, Annaba, Algeria"
+  - family-names: "Djebbar"
+    given-names: "Akila"
+    affiliation: "LRI Laboratory, Badji Mokhtar University, Annaba, Algeria"
+  - family-names: "Trari"
+    given-names: "Mohamed"
+    affiliation: "LSVER, USTHB, Algiers, Algeria"
+preferred-citation:
+  type: article
+  title: "VoltGNN: A graph neural network for autonomous renewable energy redistribution in IoT-driven smart grids"
+  journal: "Energy and AI"
+  volume: 25
+  start: 100841
+  year: 2026
+  doi: "10.1016/j.egyai.2026.100841"
+  publisher:
+    name: "Elsevier"
+  authors:
+    - family-names: "Bahi"
+      given-names: "Abderaouf"
+    - family-names: "Khadir"
+      given-names: "Mohamed Tarek"
+    - family-names: "Ourici"
+      given-names: "Amel"
+    - family-names: "Dinçer"
+      given-names: "Hasan"
+    - family-names: "Yüksel"
+      given-names: "Serhat"
+    - family-names: "Lakhdara"
+      given-names: "Amira"
+    - family-names: "Djebbar"
+      given-names: "Akila"
+    - family-names: "Trari"
+      given-names: "Mohamed"
+license: MIT
+repository-code: "https://github.com/AraoufBh/VoltGNN"
