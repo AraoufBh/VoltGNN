@@ -1,0 +1,51 @@
+# VoltGNN — Pecan Street configuration (Section 5.1)
+# Field dataset: only EDE / RUR are reported (proxy graph, no physical line flows).
+
+dataset: pecan_street
+data_root: data/raw
+window: 672            # one week at 15-min resolution
+grid_dt_min: 15
+
+tau_c: 0.7
+lambda_c: 1.0
+beta: 1.0
+gamma: 1.0
+
+in_dim: 16
+num_nodes: 25         # 25 households with co-located PV + EV
+hidden_dim: 128
+memory_dim: 128
+gat_heads: 4
+g_dim: 256
+decoder_layers: 4
+time_dim: 8
+
+mu1: 5.0
+mu2: 2.0
+mu3: 0.5
+
+lambda_b: 5.0
+lambda_o: 2.0
+lambda_r: 1.0
+
+alpha1: 1.0
+alpha2: 2.0
+alpha3: 5.0
+alpha4: 1.0
+
+lr: 0.0003
+epochs: 200
+grad_clip: 1.0
+batch_size: 32
+early_stop_patience: 20
+
+ppo_episodes: 500
+ppo_gamma: 0.99
+ppo_clip: 0.2
+
+t_adapt: 96           # 24 h at 15-min resolution
+k_adapt: 5
+
+seed: 42
+device: cuda
+run_dir: runs/pecan_street
